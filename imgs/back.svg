@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="496px" height="620px" viewBox="0 0 496 620" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>back</title>
+    <g id="memory-game" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="back">
+            <rect id="Rectangle-Copy-10" fill="#D3D3D3" x="0" y="0" width="496" height="620"></rect>
+            <g id="owlhead" transform="translate(248.000000, 309.500000) scale(-1, 1) translate(-248.000000, -309.500000) translate(84.000000, 190.000000)">
+                <path d="M328,33.0588532 C328,61.4220185 312.639033,87.3288744 287.30205,107.092676 C288.543623,113.434599 289.19084,119.962576 289.19084,126.62613 C289.19084,188.637067 233.140992,238.906863 164,238.906863 C94.8590084,238.906863 38.8091603,188.637067 38.8091603,126.62613 C38.8091603,119.962576 39.456377,113.434599 40.6975058,107.090007 C15.3609668,87.3288744 0,61.4220185 0,33.0588532 C0,21.6754957 2.47428606,10.6877912 7.07473837,0.334075876 C50.0096047,31.3421517 104.588281,49.9009631 164,49.9009631 C223.411719,49.9009631 277.990395,31.3421517 320.922051,0.335826257 C325.525714,10.6877912 328,21.6754957 328,33.0588532 Z" id="Combined-Shape" fill="#5A5A5A"></path>
+                <g id="glasses" transform="translate(49.593338, 100.947226)" stroke="#D3D3D3">
+                    <g id="left" transform="translate(0.406662, 0.445631)" stroke-width="8">
+                        <path d="M0,28.2789647 C0,26.4248873 14.6315059,11.6563922 24,10.4203406 C29.8292852,10.0083234 33.1626186,13.315476 34,20.3417984" id="earhook-L" stroke-linecap="round" stroke-linejoin="round" transform="translate(17.000000, 19.332536) scale(-1, 1) translate(-17.000000, -19.332536) "></path>
+                        <ellipse id="glass-L" cx="66.406662" cy="36.2313456" rx="32" ry="31.7857143"></ellipse>
+                    </g>
+                    <g id="right" transform="translate(124.406662, 0.445631)" stroke-width="8">
+                        <path d="M70,28.2789647 C70,26.4248873 84.6315059,11.6563922 94,10.4203406 C99.8292852,10.0083234 103.162619,13.315476 104,20.3417984" id="earhook-R" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <ellipse id="glass-R" cx="37.8723109" cy="36.2313456" rx="32" ry="31.7857143"></ellipse>
+                    </g>
+                    <path d="M101.5517,38.1228644 C107.044305,36.4672681 111.20808,35.6394699 114.043026,35.6394699 C116.877971,35.6394699 121.041746,36.4672681 126.534351,38.1228644" id="Path" stroke-width="10" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

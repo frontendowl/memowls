@@ -1,0 +1,170 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* --------- HEADER --------- */
+.head,
+.box {
+  width: 80%;
+  max-width: 100vh;
+}
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+/* --------- GAME FIELD --------- */
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(80px, 22%));
+  grid-template-rows: 1fr;
+  grid-gap: 4%;
+  -webkit-transform: translateZ(0);
+}
+
+/* --------- CARDS --------- */
+.card:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  padding-bottom: 125%;
+}
+.card,
+.flipper {
+  margin: 0;
+}
+.card {
+  display: flex;
+  padding: 0;
+
+  -webkit-perspective: 600px;
+  perspective: 600px;
+  -moz-transform: perspective(600px);
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.flipper {
+  width: 100%;
+
+  position: relative;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border: 4px solid black;
+
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card-back {
+  z-index: 2;
+  background-color: blue;
+
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.is-flipped .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.is-not-matched .flipper .card-front {
+  border-color: red;
+}
+.is-matched .flipper .card-front {
+  border-color: green;
+}
+
+/* --------- ALERTS --------- */
+.background {
+  display: none;
+
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.alert.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lose,
+.win {
+  display: none;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.lose *,
+.win * {
+  margin: 0.5rem;
+}
+.js-win .win,
+.js-lose .lose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn {
+  cursor: pointer;
+}
+
+/* --------- MEDIA QUERY --------- */
+@media (max-width: 480px) {
+  .head,
+  .box {
+    width: 94%;
+  }
+}
+@media (max-width: 540px) {
+  .head,
+  .box {
+    width: 88%;
+  }
+}
+
+@media (max-aspect-ratio: 7/10) {
+  .box {
+    grid-template-columns: repeat(3, minmax(80px, 30%));
+    grid-gap: 5%;
+  }
+}

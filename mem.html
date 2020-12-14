@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>memory game</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <header class="head">
+      <h1 class="header">
+        Find all matching pairs.
+      </h1>
+      <div class="timer" id="timer">00:00</div>
+    </header>
+
+    <section class="box" id="js-box">
+      <div class="card js-card" data-pic="1">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="1" src="./imgs/1.svg" />
+        </div>
+      </div>
+      <!-- 1 -->
+
+      <div class="card js-card" data-pic="1">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="1" src="./imgs/1.svg" />
+        </div>
+      </div>
+      <!-- 2 -->
+
+      <div class="card js-card" data-pic="2">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="2" src="./imgs/2.svg" />
+        </div>
+      </div>
+      <!-- 3 -->
+
+      <div class="card js-card" data-pic="2">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="2" src="./imgs/2.svg" />
+        </div>
+      </div>
+      <!-- 4 -->
+
+      <div class="card js-card" data-pic="3">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="3" src="./imgs/3.svg" />
+        </div>
+      </div>
+      <!-- 5 -->
+
+      <div class="card js-card" data-pic="3">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="3" src="./imgs/3.svg" />
+        </div>
+      </div>
+      <!-- 6 -->
+
+      <div class="card js-card" data-pic="4">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="4" src="./imgs/4.svg" />
+        </div>
+      </div>
+      <!-- 7 -->
+
+      <div class="card js-card" data-pic="4">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="4" src="./imgs/4.svg" />
+        </div>
+      </div>
+      <!-- 8 -->
+
+      <div class="card js-card" data-pic="5">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="5" src="./imgs/5.svg" />
+        </div>
+      </div>
+      <!-- 9 -->
+
+      <div class="card js-card" data-pic="5">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="5" src="./imgs/5.svg" />
+        </div>
+      </div>
+      <!-- 10 -->
+
+      <div class="card js-card" data-pic="6">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="6" src="./imgs/6.svg" />
+        </div>
+      </div>
+      <!-- 11 -->
+
+      <div class="card js-card" data-pic="6">
+        <div class="flipper">
+          <div class="card-back"></div>
+          <img class="card-front pic" alt="6" src="./imgs/6.svg" />
+        </div>
+      </div>
+      <!-- 12 -->
+    </section>
+
+    <section class="alert background" id="js-alert">
+      <article class="win">
+        <h2 class="modal-header">
+          You win!
+        </h2>
+        <button class="btn js-btn">PLAY AGAIN</button>
+      </article>
+
+      <article class="lose">
+        <h2 class="modal-header">Time is over.</h2>
+        <button class="btn js-btn">TRY AGAIN</button>
+      </article>
+    </section>
+
+    <script src="./mem.js"></script>
+    <script type="text/javascript">
+      game({
+        gameTimeSeconds: 60,
+        boxId: "js-box",
+        timerId: "timer",
+        alertId: "js-alert",
+
+        winClass: "js-win",
+        loseClass: "js-lose",
+        flipClass: "is-flipped",
+        matchedClass: "is-matched",
+        unmatchedClass: "is-not-matched",
+
+        cardSelector: ".js-card",
+        btnSelector: ".js-btn"
+      });
+    </script>
+  </body>
+</html>
